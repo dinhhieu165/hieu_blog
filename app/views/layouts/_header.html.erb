@@ -13,15 +13,17 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
+              <li><%= link_to "Settings", "#" %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>
               </li>
             </ul>
+          <li><a>Xin chao: <%=current_user.name %></a></li>
           </li>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
+          <li><a>Xin Chao: Khach</a></li>
         <% end %>
       </ul>
     </nav>
