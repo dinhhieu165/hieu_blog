@@ -14,6 +14,21 @@
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form_control' %>
 
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: 'form-control' %>
+
+      <%= f.label :birthday %>
+      <%= f.text_field :birthday, class: 'form-control' %>
+
+      <%= f.label :gender %><br />
+      <%= f.label :gender, "Male", :value => "Male"  %>
+      <%= f.radio_button :gender, true%>
+      <%= f.label :autolyse, "Female", :value => "Female"  %>
+      <%= f.radio_button :gender, false, :checked => true %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address , class: 'form-control' %>
+
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form_control' %>
 

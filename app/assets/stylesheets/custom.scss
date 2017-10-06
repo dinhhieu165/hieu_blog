@@ -147,11 +147,11 @@ aside {
 
 .gravatar {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .gravatar_edit {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 /* forms */
@@ -185,4 +185,18 @@ input {
 .container #my_image {
   width: 100%;
   height: auto;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
