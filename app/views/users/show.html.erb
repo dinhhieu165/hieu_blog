@@ -7,14 +7,23 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %><br/>
-        <%= @user.email %><br/>
-        <%= @user.phone %><br/>
-        <%= @user.birthday %><br/>
-        <%= @user.gender %><br/>
-        <%= @user.address %><br/>
+        <%= @user.name %><br/><br/>
+        <%= @user.email %><br/><br/>
+        <%= @user.phone %><br/><br/>
+        <%= @user.birthday %><br/><br/>
+        <%= @user.gender %><br/><br/>
+        <%= @user.address %><br/><br/>
 
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>

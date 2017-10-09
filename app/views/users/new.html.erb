@@ -6,7 +6,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form_control' %>
@@ -18,13 +18,13 @@
       <%= f.text_field :phone, class: 'form-control' %>
 
       <%= f.label :birthday %>
-      <%= f.text_field :birthday, class: 'form-control' %>
+      <%= f.date_field :birthday, class: 'form-control' %>
 
       <%= f.label :gender %><br />
-      <%= f.label :gender, "Male", :value => "Male"  %>
-      <%= f.radio_button :gender, true%>
-      <%= f.label :autolyse, "Female", :value => "Female"  %>
-      <%= f.radio_button :gender, false, :checked => true %>
+      <%= f.label :gender, "Male", for: 'user_gender_male'%>s
+      <%= f.radio_button :gender,"Male", class: 'gender'%>
+      <%= f.label :gender, "Female" , for: 'user_gender_female'%>
+      <%= f.radio_button :gender, "Female", class: 'gender' %><br/><br/>
 
       <%= f.label :address %>
       <%= f.text_field :address , class: 'form-control' %>
