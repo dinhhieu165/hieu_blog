@@ -4,12 +4,17 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem "will_paginate", "~> 3.0.4", :require => nil
 
-gem 'bcrypt',          '3.1.7'
-gem 'bootstrap-sass', '3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem "will_paginate", "~> 3.0.4", :require => nil
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'bcrypt',          '3.1.7'
+gem 'faker',         '1.7.3'
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog',                     '1.40.0'
+gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
