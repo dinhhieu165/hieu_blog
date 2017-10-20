@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def feed
-    Micorpost.where("user_id = ?", id)
+    Micropost.where("user_id = ?", id)
   end
 
   def remember

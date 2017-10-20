@@ -9,5 +9,11 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sesions#create'
   delete '/logout',  to: 'sesions#destroy'
   resources :users
+  resources :account_activations
+  resources :password_resets
   resources :microposts
+  namespace :admin do
+    resources :users, except: [:index, :show]
+    resources :microposts, except: [:index, :show]
+  end
 end
